@@ -17,7 +17,7 @@ const Cart = () => {
   const { cartItems, getTotalAmount } = useContext(ShopContext);
   const totalAmount = getTotalAmount();
   return (
-    <div className=" bg-black text-white h-screen">
+    <div className=" bg-black text-white h-screen bg-screen">
       <div className=" text-5xl text-center py-10">Your cart items</div>
       <div className="flex h-auto w-screen flex-wrap justify-center items-center py-10">
         {data.map((product) => {
