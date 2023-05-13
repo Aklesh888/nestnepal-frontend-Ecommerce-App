@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import Product from "./Product";
 import { useQuery } from "react-query";
-import { ShopContext } from "../context/ShopContext";
 
 
 const noOfProducts = 20

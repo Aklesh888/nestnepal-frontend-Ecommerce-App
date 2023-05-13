@@ -12,7 +12,7 @@ async function fetchData() {
 }
 
 const Cart = () => {
-  const { data, status } = useQuery("data", fetchData);
+  const { data } = useQuery("data", fetchData);
 
   const { cartItems, getTotalAmount } = useContext(ShopContext);
   const totalAmount = getTotalAmount();
@@ -20,8 +20,8 @@ const Cart = () => {
     <div className=" bg-black text-white h-screen bg-screen">
       <div className=" text-5xl text-center py-10">Your cart items</div>
       <div className="flex h-auto w-screen flex-wrap justify-center items-center py-10">
-        {data.map((product) => {
-          if (cartItems[product.id] != 0) {
+        {data.map((product)=> {
+          if (cartItems[product.id] !== 0) {
             return (
               <Product
                 key={product.id}
@@ -33,6 +33,9 @@ const Cart = () => {
                 id={product.id}
               />
             );
+          }
+          else{
+            return <div></div>
           }
         })}
       </div>

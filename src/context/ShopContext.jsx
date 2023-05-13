@@ -23,7 +23,7 @@ const getDefaultCart = () => {
 
 const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
-  const { data, status } = useQuery("data", fetchData);
+  const { data } = useQuery("data", fetchData);
 
 
   const getTotalAmount = () => {
